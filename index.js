@@ -27,11 +27,11 @@ function processFirstItem(stringList, callback) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
- * 
+ *  One uses a nested function while one doesn't
  * 2. Which of the two uses a closure? How can you tell?
- * 
+ *  the first uses a closure because it is a variable that is nested withn a function but is returned outside the funciton
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- *
+ * Counter one would be preferable if you are trying to store data to memory. Counter 2 would be better if it is the only function that is in your program.
 */
 
 // counter1 code
@@ -56,12 +56,22 @@ function counter2() {
 
 Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
+function inning(points){
+    for(let i = 0; i < points; i++){
+      var homeRun = Math.round(Math.random() * 2);
 
-    /*Code Here*/
-
+      if (homeRun === 2) {
+        console.log("2points");
+      }
+      if (homeRun === 1) {
+        console.log("1points");
+      }
+      if (homeRun === 0) {
+        console.log("out");
+      }
+    }
 }
-
+inning(9);
 /* Task 3: finalScore()
 
 Write a higher order function called `finalScore` that accepts the callback function `inning` (from above) and a number of innings and and returns the final score of the game in the form of an object.
