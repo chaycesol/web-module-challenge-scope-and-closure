@@ -42,6 +42,7 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+** A closure gives you the ability to access an outer function's scope and variables from an inner (nested) function.
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,9 +64,11 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+** The closeure comes from the anonymous function because it is nested within personal dice, which is then being called outside by the function dansRoll. 
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+** The thing that can always stay the same is the template literals that are defined in the console log that will always remain the same. The variables name and newRoll will change based on the value that comes out of the math function or what name is being called - dan or zoe.
 c. What is the lexical scope of `newRoll`? 
-
+personalDice
 ### Task 2c - Exit Ticket
 
 Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/WjSzNh9gDrD8Xn8hw/enY3yPRP3nEm7E).
